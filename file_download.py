@@ -11,10 +11,8 @@ async def download(url, file_name):
                         break
                     f.write(chunk)
 
-async def main():
-    file_url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0101EN-SkillsNetwork/labs/Data%20files/auto.csv'
-    file_name = 'auto.csv'
-    await download(file_url, file_name)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    file_url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0101EN-SkillsNetwork/labs/Data%20files/auto.csv'
+    file_name = 'auto.csv'
+    asyncio.run(download(file_url, file_name))
